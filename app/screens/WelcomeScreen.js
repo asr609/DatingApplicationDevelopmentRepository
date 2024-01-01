@@ -4,9 +4,9 @@ import { Image, ImageBackground,StyleSheet, Text, View } from 'react-native';
 function WelcomeScreen(props) {
     return (
         
-        <ImageBackground style= {styles.background} source = {require("../assets/splash.png")}>
+        <ImageBackground style= {styles.background} source = {require("../assets/logo.png")}>
         <View style = {styles.logoContainer}>
-        <Image style = {styles.logo}source={require("../assets/icon.png")}/>
+        <Image style = {styles.logo}source={require("../assets/logo.png")}/>
         <Text>Here is a Text</Text>
         </View>
         <View style={styles.loginButton}></View>
