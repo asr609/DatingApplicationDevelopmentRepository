@@ -1,7 +1,7 @@
 import React from 'react';
-import { Image, ImageBackground,StyleSheet, Text, View } from 'react-native';
+import { Image, ImageBackground,StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-function WelcomeScreen(props) {
+function WelcomeScreen({navigation}) {
     return (
         
         <ImageBackground style= {styles.background}>
@@ -9,12 +9,23 @@ function WelcomeScreen(props) {
         <Image style = {styles.logo}source={require("../assets/logoremovebg.png")}/>
         <Text>Here is a Text</Text>
         </View>
-        <View style={styles.loginButton}>
-            <Text style={styles.Text}>Login</Text>
+        <TouchableOpacity onPress ={() =>{
+                navigation.navigate("SignInScreen");
+        }}>
+            <View style={styles.loginButton}>
+            <Text style={styles.Text}>Login
+            </Text>
         </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={()=>{
+            navigation.navigate("LoginScreen")
+        }}>
         <View style={styles.registerButton}>
-            <Text style={styles.Text}>Sign Up</Text>
+            <Text style={styles.Text}>Register/ Sign Up</Text>
         </View>
+
+        </TouchableOpacity> 
+      
         </ImageBackground>
     );
 }
