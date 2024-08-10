@@ -10,7 +10,7 @@ function WelcomeScreen({navigation}) {
         <Text>Here is a Text</Text>
         </View>
         <TouchableOpacity onPress ={() =>{
-                navigation.navigate("SignInScreen");
+                navigation.navigate("LoginScreen");
         }}>
             <View style={styles.loginButton}>
             <Text style={styles.Text}>Login
@@ -18,7 +18,7 @@ function WelcomeScreen({navigation}) {
         </View>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>{
-            navigation.navigate("LoginScreen")
+            navigation.navigate("SignInScreen")
         }}>
         <View style={styles.registerButton}>
             <Text style={styles.Text}>Register/ Sign Up</Text>
@@ -34,12 +34,13 @@ const styles = StyleSheet.create({
     background:{
         flex:1,
         justifyContent: "flex-end",
+        backgroundColor : 'white'
         
     },
     loginButton:{
         width :'100%',
         height : 70,
-        backgroundColor : "#fc5c65"
+        backgroundColor : '#800000'
     },
     registerButton:{
         width: '100%',
